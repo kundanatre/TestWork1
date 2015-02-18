@@ -11,9 +11,9 @@ package com.mynews.model;
 public class News {
 	private String username, userPic;
 	private String newsgist;
-	private int newsimg;
-	private int newsaudio;
-	private int newsvideo;
+	private boolean newsimg;
+	private boolean newsaudio;
+	private boolean newsvideo;
 	private String timeofnews;
 		
 	public News(){
@@ -30,7 +30,7 @@ public class News {
 	 * @param timeofnews
 	 */
 	public News(String username, String userPic, String newsgist,
-			int newsimg, int newsaudio, int newsvideo, String timeofnews) {
+			boolean newsimg, boolean newsaudio, boolean newsvideo, String timeofnews) {
 		this.username	=	username;
 		this.userPic	=	userPic;
 		this.newsgist	=	newsgist;
@@ -85,42 +85,42 @@ public class News {
 	/**
 	 * @return the newsimg
 	 */
-	public int getNewsimg() {
+	public boolean getNewsimg() {
 		return newsimg;
 	}
 
 	/**
 	 * @param newsimg the newsimg to set
 	 */
-	public void setNewsimg(int newsimg) {
+	public void setNewsimg(boolean newsimg) {
 		this.newsimg = newsimg;
 	}
 
 	/**
 	 * @return the newsaudio
 	 */
-	public int getNewsaudio() {
+	public boolean getNewsaudio() {
 		return newsaudio;
 	}
 
 	/**
 	 * @param newsaudio the newsaudio to set
 	 */
-	public void setNewsaudio(int newsaudio) {
+	public void setNewsaudio(boolean newsaudio) {
 		this.newsaudio = newsaudio;
 	}
 
 	/**
 	 * @return the newsvideo
 	 */
-	public int getNewsvideo() {
+	public boolean getNewsvideo() {
 		return newsvideo;
 	}
 
 	/**
 	 * @param newsvideo the newsvideo to set
 	 */
-	public void setNewsvideo(int newsvideo) {
+	public void setNewsvideo(boolean newsvideo) {
 		this.newsvideo = newsvideo;
 	}
 

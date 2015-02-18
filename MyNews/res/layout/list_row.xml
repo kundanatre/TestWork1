@@ -35,31 +35,38 @@
 
     <ImageView
         android:id="@+id/img_icon"
-        android:contentDescription="@string/img_icon_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/userPic"
+        android:layout_toRightOf="@+id/userName"
+        android:contentDescription="@string/img_icon_title"
+        android:layout_marginLeft="1dip"
+        android:maxHeight="4dp"
+        android:maxWidth="4dp"
         android:src="@android:drawable/ic_menu_camera" />
     
     <ImageView
         android:id="@+id/video_icon"
-        android:contentDescription="@string/img_icon_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/img_icon"
-        android:src="@android:drawable/ic_menu_camera" />
+        android:contentDescription="@string/img_icon_title"
+        android:layout_marginLeft="1dip"
+        android:maxHeight="4dp"
+        android:maxWidth="4dp"
+        android:src="@android:drawable/ic_menu_view" />
+    
     <ImageView
         android:id="@+id/audio_icon"
-        android:contentDescription="@string/img_icon_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/video_icon"
-        android:src="@android:drawable/ic_menu_camera" />
-
+        android:contentDescription="@string/img_icon_title"
+        android:layout_marginLeft="1dip"
+        android:maxHeight="4dp"
+        android:maxWidth="4dp"
+        android:src="@android:drawable/ic_btn_speak_now" />
+   
 </RelativeLayout>

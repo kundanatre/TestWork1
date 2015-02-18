@@ -35,7 +35,8 @@ import com.mynews.model.News;
  */
 public class TopNewsFragment extends Fragment {
 	// News json url
-	private static final String url = "http://192.168.1.144:8080/mynewwebservice/rest/mynews/news/top";
+	private static final String ipaddress	=	"192.168.1.145";
+	private static final String url = "http://"+ipaddress+":8080/mynewwebservice/rest/mynews/news/top";
 	private ProgressDialog pDialog;
 	private List<News> newsList = new ArrayList<News>();
 	private ListView listView;
@@ -82,11 +83,11 @@ public class TopNewsFragment extends Fragment {
 								JSONObject obj = response.getJSONObject(i);
 								News news = new News();
 								news.setUsername(obj.getString("username"));
-								news.setUserPic(obj.getString("userpic"));
-								news.setNewsgist(obj.getString("newgist"));
-								news.setNewsimg(obj.getInt("newsimg"));
-								news.setNewsaudio(obj.getInt("newsaudio"));
-								news.setNewsvideo(obj.getInt("newsvideo"));
+								news.setUserPic("http://"+ipaddress+":8080/mynewwebservice/reporters_images/"+obj.getString("userPic"));
+								news.setNewsgist(obj.getString("newsgist"));
+								news.setNewsimg(obj.getBoolean("newsimg"));
+								news.setNewsaudio(obj.getBoolean("newsaudio"));
+								news.setNewsvideo(obj.getBoolean("newsvideo"));
 								news.setTimeofnews(obj.getString("timeofnews"));
 								newsList.add(news);
 

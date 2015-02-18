@@ -80,9 +80,16 @@ public class CustomListAdapter extends BaseAdapter {
 		// newsgist
 		newsgist.setText(String.valueOf(nwsobj.getNewsgist()));
 		
-		img_icon.setVisibility(nwsobj.getNewsimg());
-		audio_icon.setVisibility(nwsobj.getNewsaudio());
-		video_icon.setVisibility(nwsobj.getNewsvideo());
+	// if json data does not contain any of these then hide them from UI
+		if(!nwsobj.getNewsimg()){
+			img_icon.setVisibility(View.GONE);
+		}
+		if(!nwsobj.getNewsaudio()){
+			audio_icon.setVisibility(View.GONE);
+		}
+		if(!nwsobj.getNewsvideo()){
+			video_icon.setVisibility(View.GONE);
+		}
 		
 		return convertView;
 	}
